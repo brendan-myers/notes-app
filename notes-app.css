@@ -1,0 +1,32 @@
+* {
+  font-family: helvetica;
+}
+
+.trix {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  min-height: 0px;
+  margin: 10px 0px 10px 0px;
+}
+
+.no-border {
+  border: none;
+}
+
+trix-toolbar {
+  display: none;
+}
+
+.field-title {
+  font-style: italic;
+  font-weight: lighter;
+  color: #999;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}

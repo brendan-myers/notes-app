@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Notes App</title>
+    
+    <!-- Trix-Editor -->
+    <link rel="stylesheet" type="text/css" href="trix.css">
+    <script type="text/javascript" src="trix.js"></script>
+    
+    <!-- Awesomplete -->
+    <link rel="stylesheet" href="awesomplete.css" />
+    <script src="awesomplete.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="notes-app.css">
+
+  </head>
+  <body>
+    <h2>Meeting Notes</h2>
+
+      <span class="field-title">Who is in attendance?</span>
+      <ul id="attendees"></ul>
+      <trix-editor class="trix" id="attendees-editor"></trix-editor>
+
+    <br/>
+
+      <span class="field-title">Notes</span>
+      <trix-editor class="trix no-border hidden" id="notes-saved"></trix-editor>
+      <table style="width: 100%;">
+        <tr>
+          <td>
+            <input id="current-attendee" data-autofirst/>
+          </td>
+          <td style="width: 100%;">
+            <trix-editor class="trix" id="notes-editor"></trix-editor>
+          </td>
+        </tr>
+      </table>
+
+    <script src="notes-app.js"></script>
+  </body>
+</html>
