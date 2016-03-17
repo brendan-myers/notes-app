@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Notes App</title>
+    
+    <!-- Trix-Editor -->
+    <link rel="stylesheet" type="text/css" href="css/trix.css">
+    <script type="text/javascript" src="js/trix.js"></script>
+    
+    <!-- Awesomplete -->
+    <link rel="stylesheet" href="css/awesomplete.css" />
+    <script src="js/awesomplete.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/notes-app.css">
+
+    <!-- Electron dialog -->
+    <script>
+      var remote = require('remote'); 
+      var dialog = remote.require('dialog'); 
+    </script>
+  </head>
+  <body>
+    <h2>Meeting Notes</h2>
+    
+    <button id="saveFile" onclick="saveFile();">Save</button>
+
+    <br/>
+    <br/>
+
+    <span class="field-title">Who is in attendance?</span>
+    <ul id="attendees"></ul>
+    <trix-editor class="trix" id="attendees-editor"></trix-editor>
+
+    <br/>
+
+    <span class="field-title">Notes</span>
+    <trix-editor class="trix no-border hidden small" id="notes-saved"></trix-editor>
+    <!-- Oh yeah, table layout. This is probably/almost definitely 
+    the wrong way to do this -->
+    <table style="width: 100%;">
+      <tr>
+        <td>
+          <input id="current-attendee" class="attendees" data-autofirst />
+        </td>
+        <td style="width: 100%;">
+          <trix-editor class="trix" id="notes-editor"></trix-editor>
+        </td>
+      </tr>
+    </table>
+
+    <script src="js/notes-app.js"></script>
+  </body>
+</html>
